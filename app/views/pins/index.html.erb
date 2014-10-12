@@ -3,8 +3,9 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Description</th>
-      <th>User_id</th>
+      <th>User</th>
       <th></th>
       <th></th>      
       <th></th>
@@ -14,7 +15,8 @@
   <tbody>
     <% @pins.each do |pin| %>
       <tr>
-        <td style="padding:0px;"><%= pin.description %></td>
+        <td style="padding:0px;"><%= image_tag pin.image.url(:medium) %></td>
+        <td style="padding:0px;"><%= pin.description %></td>        
         <td style="padding:0px;"><%= pin.user.email if pin.user %></td>
         <td style="padding:3px;"><%= link_to 'Show', pin %></td>
         <% if pin.user == current_user %>
