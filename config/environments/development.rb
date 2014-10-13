@@ -30,8 +30,6 @@ Pinteresting::Application.configure do
   # Required for Heroku
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
-  # Lets Paperclip know where to look for utility
-  Paperclip.options[:command_path] = 'C:/PROGRA~1/IMAGEM~1.9-Q'
 
 end
   
